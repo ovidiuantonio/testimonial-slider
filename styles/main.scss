@@ -1,0 +1,212 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+
+  @media only screen and (min-width: 700px) {
+    font-size: 72.5%;
+  }
+
+  @media only screen and (min-width: 1900px) {
+    font-size: 102.5%;
+  }
+
+  @media only screen and (min-width: 3000px) {
+    font-size: 142.5%;
+  }
+
+  @media only screen and (min-width: 4000px) {
+    font-size: 182.5%;
+  }
+
+  @media only screen and (max-width: 1200px) {
+    font-size: 42.5%;
+  }
+}
+
+$gray: hsl(240, 18%, 77%);
+$dark-blue: hsl(240, 38%, 20%);
+
+body {
+  font-family: "Inter", sans-serif;
+  background: url("../images/pattern-bg.svg");
+  background-size: 45%;
+  background-repeat: no-repeat;
+  background-position-x: 45vw;
+  background-position-y: 5vh;
+  padding: 0 10rem;
+
+  @media only screen and (max-width: 1200px) {
+    background-position-y: 20vh;
+    background-position-x: 40vw;
+    background-size: 55%;
+  }
+
+  @media only screen and (max-width: 900px) {
+    background-position-y: 5vh;
+    background-position-x: 10vw;
+    background-size: 90%;
+    padding: 0;
+  }
+}
+
+.testimonial {
+  width: 100%;
+
+  padding: 10rem;
+
+  @media only screen and (max-width: 900px) {
+    padding: 0;
+  }
+
+  &-right {
+    float: right;
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+
+    @media only screen and (max-width: 900px) {
+      float: none;
+      width: 80%;
+      display: block;
+
+      top: 30vh;
+      margin: auto;
+    }
+  }
+
+  &-left {
+    float: left;
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    @media only screen and (max-width: 900px) {
+      float: none;
+      width: 80%;
+      display: block;
+
+      margin: auto;
+      transform: translateX(-50%);
+      top: 65vh;
+      left: 50%;
+    }
+
+    & img {
+      position: absolute;
+      z-index: -1;
+      transform: translateX(50%);
+    }
+  }
+
+  &__text {
+    font-size: 3rem;
+    font-weight: 300;
+    line-height: 1.4;
+    margin-top: 5rem;
+    padding-bottom: 4rem;
+    width: 90%;
+
+    @media only screen and (max-width: 900px) {
+      width: 100%;
+      text-align: center;
+      transform: translateY(3rem);
+      font-size: 3.5rem;
+    }
+  }
+
+  &__author {
+    font-size: 1.5rem;
+    font-weight: 700;
+
+    & span {
+      font-weight: 300;
+      padding-left: 1rem;
+
+      @media only screen and (max-width: 900px) {
+        padding-bottom: 10rem;
+      }
+    }
+
+    @media only screen and (max-width: 900px) {
+      transform: translateY(3rem);
+      text-align: center;
+      font-size: 2rem;
+    }
+  }
+
+  &__img {
+    position: relative;
+
+    &-image {
+      max-width: 100%;
+      height: auto;
+      box-shadow: 3rem 3rem 3rem rgba(black, 0.15);
+      border-radius: 10px;
+
+      &:nth-child(2) {
+        position: absolute;
+        left: 0;
+        z-index: -1;
+      }
+
+      @media only screen and (min-width: 1700px) {
+        width: 70%;
+      }
+
+      @media only screen and (max-width: 1200px) {
+        max-width: 80%;
+        box-shadow: 2rem 2rem 3rem rgba(black, 0.1);
+      }
+
+      @media only screen and (max-width: 900px) {
+        max-width: 85%;
+        box-shadow: 1rem 1rem 2rem rgba(black, 0.1);
+      }
+    }
+  }
+
+  &__controls {
+    background-color: white;
+    display: inline-block;
+    padding: 2rem 3rem;
+    border-radius: 5rem;
+    position: absolute;
+    bottom: -3rem;
+    left: 4rem;
+
+    @media only screen and (max-width: 900px) {
+      display: block;
+      margin: auto;
+      padding: 2rem 6rem;
+    }
+  }
+}
+
+.btn-prev {
+  margin-right: 3rem;
+
+  @media only screen and (max-width: 900px) {
+    margin-right: 5rem;
+  }
+}
+
+.btn-prev,
+.btn-next {
+  position: relative;
+  cursor: pointer;
+  z-index: 20;
+  display: inline-block;
+}
+
+.image-boy,
+.image-girl {
+  transition: all 0.3s ease;
+}

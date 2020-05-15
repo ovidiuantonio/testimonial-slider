@@ -1,0 +1,254 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+@media only screen and (min-width: 700px) {
+  html {
+    font-size: 72.5%;
+  }
+}
+
+@media only screen and (min-width: 1900px) {
+  html {
+    font-size: 102.5%;
+  }
+}
+
+@media only screen and (min-width: 3000px) {
+  html {
+    font-size: 142.5%;
+  }
+}
+
+@media only screen and (min-width: 4000px) {
+  html {
+    font-size: 182.5%;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  html {
+    font-size: 42.5%;
+  }
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: url("../images/pattern-bg.svg");
+  background-size: 45%;
+  background-repeat: no-repeat;
+  background-position-x: 45vw;
+  background-position-y: 5vh;
+  padding: 0 10rem;
+}
+
+@media only screen and (max-width: 1200px) {
+  body {
+    background-position-y: 20vh;
+    background-position-x: 40vw;
+    background-size: 55%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  body {
+    background-position-y: 5vh;
+    background-position-x: 10vw;
+    background-size: 90%;
+    padding: 0;
+  }
+}
+
+.testimonial {
+  width: 100%;
+  padding: 10rem;
+}
+
+@media only screen and (max-width: 900px) {
+  .testimonial {
+    padding: 0;
+  }
+}
+
+.testimonial-right {
+  float: right;
+  width: 50%;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+@media only screen and (max-width: 900px) {
+  .testimonial-right {
+    float: none;
+    width: 80%;
+    display: block;
+    top: 30vh;
+    margin: auto;
+  }
+}
+
+.testimonial-left {
+  float: left;
+  width: 50%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+@media only screen and (max-width: 900px) {
+  .testimonial-left {
+    float: none;
+    width: 80%;
+    display: block;
+    margin: auto;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    top: 65vh;
+    left: 50%;
+  }
+}
+
+.testimonial-left img {
+  position: absolute;
+  z-index: -1;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+}
+
+.testimonial__text {
+  font-size: 3rem;
+  font-weight: 300;
+  line-height: 1.4;
+  margin-top: 5rem;
+  padding-bottom: 4rem;
+  width: 90%;
+}
+
+@media only screen and (max-width: 900px) {
+  .testimonial__text {
+    width: 100%;
+    text-align: center;
+    -webkit-transform: translateY(3rem);
+            transform: translateY(3rem);
+    font-size: 3.5rem;
+  }
+}
+
+.testimonial__author {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.testimonial__author span {
+  font-weight: 300;
+  padding-left: 1rem;
+}
+
+@media only screen and (max-width: 900px) {
+  .testimonial__author span {
+    padding-bottom: 10rem;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .testimonial__author {
+    -webkit-transform: translateY(3rem);
+            transform: translateY(3rem);
+    text-align: center;
+    font-size: 2rem;
+  }
+}
+
+.testimonial__img {
+  position: relative;
+}
+
+.testimonial__img-image {
+  max-width: 100%;
+  height: auto;
+  -webkit-box-shadow: 3rem 3rem 3rem rgba(0, 0, 0, 0.15);
+          box-shadow: 3rem 3rem 3rem rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+}
+
+.testimonial__img-image:nth-child(2) {
+  position: absolute;
+  left: 0;
+  z-index: -1;
+}
+
+@media only screen and (min-width: 1700px) {
+  .testimonial__img-image {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .testimonial__img-image {
+    max-width: 80%;
+    -webkit-box-shadow: 2rem 2rem 3rem rgba(0, 0, 0, 0.1);
+            box-shadow: 2rem 2rem 3rem rgba(0, 0, 0, 0.1);
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .testimonial__img-image {
+    max-width: 85%;
+    -webkit-box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.1);
+            box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.1);
+  }
+}
+
+.testimonial__controls {
+  background-color: white;
+  display: inline-block;
+  padding: 2rem 3rem;
+  border-radius: 5rem;
+  position: absolute;
+  bottom: -3rem;
+  left: 4rem;
+}
+
+@media only screen and (max-width: 900px) {
+  .testimonial__controls {
+    display: block;
+    margin: auto;
+    padding: 2rem 6rem;
+  }
+}
+
+.btn-prev {
+  margin-right: 3rem;
+}
+
+@media only screen and (max-width: 900px) {
+  .btn-prev {
+    margin-right: 5rem;
+  }
+}
+
+.btn-prev,
+.btn-next {
+  position: relative;
+  cursor: pointer;
+  z-index: 20;
+  display: inline-block;
+}
+
+.image-boy,
+.image-girl {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+/*# sourceMappingURL=main.css.map */
